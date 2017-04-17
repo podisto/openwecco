@@ -1,1 +1,2 @@
-A Symfony project created on April 16, 2017, 3:56 pm.
+# openwecco
+Openwecco est un site destiné à l'apprentissage du développement et à la découverte des nouvelles technologies du web.
