@@ -1,0 +1,8 @@
+parameters:
+    user_entity.class: UserBundle\Entity\User
+
+services:
+    ow_user.usermanager:
+        class: UserBundle\Doctrine\UserManager
+        arguments: ['@security.password_encoder', '@doctrine.orm.entity_manager', '%user_entity.class%']
+

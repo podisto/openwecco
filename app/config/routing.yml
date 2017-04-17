@@ -1,0 +1,13 @@
+platform:
+    resource: "@PlatformBundle/Resources/config/routing.yml"
+    prefix:   /
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+
+# pas besoin de définir des controller sur ces routes, SF va attraper tout seul les requetes sur ces routes (grace aux gestionnaires d'evenements)
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout

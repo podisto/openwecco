@@ -1,0 +1,26 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="col-md-6">
+        {% if error %}
+            <div class="alert alert-danger">{{ error.message }}</div>
+        {% endif %}
+
+        <form action="{{ path('login_check') }}" method="post" class="form-horizontal">
+            <label for="username">Login :</label>
+            <input class="form-control" type="text" id="username" name="_username" value="{{ last_username }}" />
+
+            <label for="password">Mot de passe :</label>
+            <input class="form-control" type="password" id="password" name="_password" />
+            <br />
+            <input type="submit" value="Connexion" class="btn btn-default" />
+        </form>
+    </div>
+    <div class="col-md-6">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis excepturi impedit minus nam nesciunt optio perspiciatis provident sit? Harum libero magnam natus perspiciatis. At doloremque doloribus eum necessitatibus nemo voluptas.
+        </p>
+        <a href="{{ path('user_registration') }}" class="btn btn-default">Créer un compte</a>
+    </div>
+{% endblock %}
+
