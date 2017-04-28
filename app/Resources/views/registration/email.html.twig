@@ -1,0 +1,15 @@
+{% extends "email_layout.html.twig" %}
+
+{% block subject %}
+    <div class="col-sm-6 col-md-offset-3">
+        <img src="{{ asset('dist/img/openwecco.png') }}" alt="openwecco">
+    </div>
+    {% autoescape %}
+    <h1>Confirmation Account</h1>
+    {% endautoescape %}
+{% endblock %}
+
+{% block body_text %}
+    <p class="lead">Hello {{ username }} votre compte a été créé. Veuillez cliquer sur le bouton ci-dessous pour l'activer.</p>
+{% endblock %}
+

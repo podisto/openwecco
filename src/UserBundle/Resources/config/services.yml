@@ -6,3 +6,6 @@ services:
         class: UserBundle\Doctrine\UserManager
         arguments: ['@security.password_encoder', '@doctrine.orm.entity_manager', '%user_entity.class%']
 
+    ow_user.mailer:
+        class:  UserBundle\Mailer\Mailer
+        arguments: ['@twig', '@mailer']

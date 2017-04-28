@@ -16,7 +16,8 @@ use UserBundle\Form\UserType;
 
 class RegistrationController extends Controller
 {
-    public function registerAction(Request $request) {
+    public function registerAction(Request $request)
+    {
 //        $user = new User();
         $userManager = $this->get('ow_user.usermanager');
         $user = $userManager->createUser();
@@ -26,11 +27,7 @@ class RegistrationController extends Controller
             $user->setPassword($userManager->updatePassword($user));
             $user->setIsActive(false);
             $userManager->updateUser($user);
-            /*$password = $this->get('security.password_encoder')->encodePassword($user, $user->getPlainPassword());
-            $user->setPassword($password);
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($user);
-            $em->flush();*/
+            $this->get('ow_user.mailer')->sendConfirmationEmailMessage($user);
 //            $this->addFlash('notice', "")
             return $this->redirectToRoute('user_login');
         }

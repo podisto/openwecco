@@ -1,3 +1,7 @@
+admin_homepage:
+    path:  /admin
+    defaults: { _controller: PlatformBundle:AdminHome:index }
+
 ow_homepage:
     path:     /
     defaults: { _controller: PlatformBundle:Home:index}
