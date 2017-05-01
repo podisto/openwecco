@@ -1,0 +1,3 @@
+adminCategory:
+    path:     /
+    defaults: { _controller: PlatformBundle:AdminCategory:index }

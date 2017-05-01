@@ -1,0 +1,3 @@
+adminTutoriel:
+    path:     /
+    defaults: { _controller: PlatformBundle:AdminTutorial:index }

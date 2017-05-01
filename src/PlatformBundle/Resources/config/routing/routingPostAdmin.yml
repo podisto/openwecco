@@ -1,0 +1,3 @@
+adminPost:
+    path:     /
+    defaults: { _controller: PlatformBundle:AdminPost:index }

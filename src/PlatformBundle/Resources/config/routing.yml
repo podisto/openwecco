@@ -2,6 +2,18 @@ admin_homepage:
     path:  /admin
     defaults: { _controller: PlatformBundle:AdminHome:index }
 
+routingTutorialAdmin:
+    resource: routing/routingTutorielAdmin.yml
+    prefix:  /admin/tutorials
+
+routingPostAdmin:
+    resource: routing/routingPostAdmin.yml
+    prefix:  /admin/posts
+
+routingCategorieAdmin:
+    resource: routing/routingCategoryAdmin.yml
+    prefix:  /admin/categories
+
 ow_homepage:
     path:     /
     defaults: { _controller: PlatformBundle:Home:index}
